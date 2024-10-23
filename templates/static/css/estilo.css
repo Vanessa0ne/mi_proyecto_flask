@@ -1,0 +1,48 @@
+body {
+  background-color: #f5d3e6;
+  /* Color inspirado en Hello Kitty */
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #f47b98;
+}
+
+.btn-primary {
+  background-color: #f47b98;
+  border-color: #f47b98;
+}
+
+a {
+  color: #f47b98;
+}
+
+.container {
+  margin: 0 auto;
+  width: 60%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+  text-align: center;
+  width: 220px;
+}
+
+.card img {
+  border-radius: 10px;
+  max-width: 100%;
+}

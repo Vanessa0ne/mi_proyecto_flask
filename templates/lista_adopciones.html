@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Lista de Adopciones{% endblock %}
+{% block content %}
+<h1>Lista de Adopciones</h1>
+<div class="galeria">
+  {% for adopcion in adopciones %}
+  <div class="card">
+    <h3>{{ adopcion.nombre }}</h3>
+    <p>{{ adopcion.contacto }}</p>
+    {% if adopcion.imagen %}
+    <img src="{{ url_for('static', filename='imagenes/' ~ adopcion.imagen) }}" alt="Imagen de {{ adopcion.nombre }}"
+      width="200">
+    {% else %}
+    <p>No hay imagen disponible</p>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+<a href="{{ url_for('registro') }}">Volver al registro</a>
+{% endblock %}

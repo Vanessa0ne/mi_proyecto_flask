@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Registro de Adopciones{% endblock %}
+{% block content %}
+<h1>Registro de Adopciones</h1>
+<form method="POST">
+  {{ form.hidden_tag() }}
+  <div>
+    {{ form.nombre.label }}<br>
+    {{ form.nombre(size=40) }}<br>
+  </div>
+  <div>
+    {{ form.contacto.label }}<br>
+    {{ form.contacto(size=40) }}<br>
+  </div>
+  <div>
+    {{ form.submit(class_="btn btn-primary") }}
+  </div>
+</form>
+<a href="{{ url_for('lista_adopciones') }}">Ver lista de adopciones</a>
+{% endblock %}
